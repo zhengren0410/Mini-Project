@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".AccountManagement.activities.StudentInfoActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stuinfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Key in your information"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/info_fullname_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Full Name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/info_fullname_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Albert Lim"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@+id/info_fullname_label" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/info_id_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student ID"
+                app:layout_constraintTop_toBottomOf="@+id/info_fullname_input"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/info_id_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="19ABC01234"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@+id/info_id_label" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="60dp"
+                android:background="@drawable/button"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_input" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountManagement.activities.LogInActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login_email_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Institution Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Albert@1utar.my"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/email_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login_password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password_input"
+            android:hint="Minimum 6 characters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/password_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forgotpw_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:layout_gravity = "right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:background="@drawable/button"
+            android:layout_marginVertical="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_input" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
